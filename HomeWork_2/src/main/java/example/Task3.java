@@ -22,7 +22,7 @@ public class Task3 {
 
         int a = 0;
 
-        for (int i = 0; i < n; i++) { // N
+        for (int i = 0; i < n; i++) { // N -> incorrect;
             for (int j = n; j > 1; j--){ //K
                 a = a + i + j;
             }
