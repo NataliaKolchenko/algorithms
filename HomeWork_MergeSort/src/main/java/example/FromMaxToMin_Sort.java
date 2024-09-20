@@ -1,0 +1,41 @@
+package example;
+
+import java.util.Arrays;
+
+public class FromMaxToMin_Sort {
+    public static void main(String[] args) {
+
+        int[] arr1 = new int[] {40,24,23,21};
+        int[] arr2 = new int[] {50,41,11,10};
+
+        int[] arrFinal = new int[arr1.length + arr2.length];
+
+        int i = 0;
+        int j = 0;
+
+        for (int k = 0; k < arrFinal.length; k++){
+
+            //если i больще, чем длина 1го массива
+            if (i > arr1.length-1){
+                int a = arr2[j];
+                arrFinal[k] = a;
+                j++;
+            }
+            //если j больще, чем длина 2го массива или  i-ый элемент из 1го массива меньше, чем j-ый элемент из 2го массива
+            else if (j > arr2.length-1 || arr1[i] > arr2[j]) {
+                int a = arr1[i];
+                arrFinal[k] = a;
+                i++;
+            }
+
+            else {
+                int b = arr2[j];
+                arrFinal[k] = b;
+                j++;
+            }
+        }
+
+        System.out.println(Arrays.toString(arrFinal));
+
+    }
+}
