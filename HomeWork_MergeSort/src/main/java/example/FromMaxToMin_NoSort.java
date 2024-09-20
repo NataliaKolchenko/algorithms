@@ -4,8 +4,8 @@ import java.util.Arrays;
 
 public class FromMaxToMin_NoSort {
     public static void main(String[] args) {
-        int[] arr1 = new int[]{21, 23, 24, 40};
-        int[] arr2 = new int[]{10, 11, 41, 50} ;
+        int[] arr2 = new int[]{21, 23, 24, 40};
+        int[] arr1 = new int[]{10, 11, 41, 50} ;
 
 
 
@@ -15,16 +15,12 @@ public class FromMaxToMin_NoSort {
         int j = arr2.length - 1;
 
         for (int k = 0; k < arrFinal.length; k++) {
-             if (i < 0) {
-                int a = arr2[j];
-                arrFinal[k] = a;
-                j--;
-            } else if (j < 0){
+             if (j < 0){
                 int b = arr1[i];
                 arrFinal[k] = b;
                 i--;
             }
-            else if (arr2[j] > arr1[i]) {
+            else if (i < 0 || arr2[j] > arr1[i]) {
                 int a = arr2[j];
                 arrFinal[k] = a;
                 j--;
