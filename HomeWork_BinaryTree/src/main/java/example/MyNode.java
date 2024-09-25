@@ -1,18 +1,18 @@
 package example;
 
 //Binary tree search (BST)
-public class Node {
+public class MyNode {
     private int value;
-    private Node left;
-    private Node right;
+    private MyNode left;
+    private MyNode right;
 
-    public Node(int value, Node left, Node right) {
+    public MyNode(int value, MyNode left, MyNode right) {
         this.value = value;
         this.left = left;
         this.right = right;
     }
 
-    public Node() {
+    public MyNode() {
     }
 
     public int getValue() {
@@ -23,19 +23,19 @@ public class Node {
         this.value = value;
     }
 
-    public Node getLeft() {
+    public MyNode getLeft() {
         return left;
     }
 
-    public void setLeft(Node left) {
+    public void setLeft(MyNode left) {
         this.left = left;
     }
 
-    public Node getRight() {
+    public MyNode getRight() {
         return right;
     }
 
-    public void setRight(Node right) {
+    public void setRight(MyNode right) {
         this.right = right;
     }
 
